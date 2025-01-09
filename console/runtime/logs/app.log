@@ -1,0 +1,332 @@
+2025-01-06 21:12:54 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#3 {main}
+2025-01-06 21:12:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\hneve\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'CLASSPATH' => 'C:\\Program Files\\Portugal Identity Card\\'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-IN5S6V19'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_5028' => '1'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\hneve'
+    'LOCALAPPDATA' => 'C:\\Users\\hneve\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-IN5S6V19'
+    'MOSQUITTO_DIR' => 'C:\\Program Files\\mosquitto'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\hneve\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\Users\\hneve\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\hneve\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\wamp64\\bin\\php\\php7.4.33;C:\\Users\\hneve\\composer;C:\\Users\\hneve\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hneve\\AppData\\Roaming\\npm;C:\\Users\\hneve\\AppData\\Local\\gitkraken\\bin;C:\\Users\\hneve\\AppData\\Local\\Programs\\Git\\cmd'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 12, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0c'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PT8HOME' => 'C:\\Program Files\\Cisco Packet Tracer 8.2.1'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-IN5S6V19'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-IN5S6V19'
+    'USERNAME' => 'hneve'
+    'USERPROFILE' => 'C:\\Users\\hneve'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1736197972.5444
+    'REQUEST_TIME' => 1736197972
+    'argv' => [
+        0 => 'yii'
+        1 => 'console/mqtt-subscribe'
+    ]
+    'argc' => 2
+]
+2025-01-06 21:22:26 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#3 {main}
+2025-01-06 21:22:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\hneve\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'CLASSPATH' => 'C:\\Program Files\\Portugal Identity Card\\'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-IN5S6V19'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_5028' => '1'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\hneve'
+    'LOCALAPPDATA' => 'C:\\Users\\hneve\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-IN5S6V19'
+    'MOSQUITTO_DIR' => 'C:\\Program Files\\mosquitto'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\hneve\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\Users\\hneve\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\hneve\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\wamp64\\bin\\php\\php7.4.33;C:\\Users\\hneve\\composer;C:\\Users\\hneve\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hneve\\AppData\\Roaming\\npm;C:\\Users\\hneve\\AppData\\Local\\gitkraken\\bin;C:\\Users\\hneve\\AppData\\Local\\Programs\\Git\\cmd'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 12, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0c'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PT8HOME' => 'C:\\Program Files\\Cisco Packet Tracer 8.2.1'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-IN5S6V19'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-IN5S6V19'
+    'USERNAME' => 'hneve'
+    'USERPROFILE' => 'C:\\Users\\hneve'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1736198546.5867
+    'REQUEST_TIME' => 1736198546
+    'argv' => [
+        0 => 'yii'
+        1 => 'console/mqtt-subscribe'
+    ]
+    'argc' => 2
+]
+2025-01-06 21:22:55 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#3 {main}
+2025-01-06 21:22:55 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\hneve\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'CLASSPATH' => 'C:\\Program Files\\Portugal Identity Card\\'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-IN5S6V19'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_5028' => '1'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\hneve'
+    'LOCALAPPDATA' => 'C:\\Users\\hneve\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-IN5S6V19'
+    'MOSQUITTO_DIR' => 'C:\\Program Files\\mosquitto'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\hneve\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\Users\\hneve\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\hneve\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\wamp64\\bin\\php\\php7.4.33;C:\\Users\\hneve\\composer;C:\\Users\\hneve\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hneve\\AppData\\Roaming\\npm;C:\\Users\\hneve\\AppData\\Local\\gitkraken\\bin;C:\\Users\\hneve\\AppData\\Local\\Programs\\Git\\cmd'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 12, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0c'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PT8HOME' => 'C:\\Program Files\\Cisco Packet Tracer 8.2.1'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-IN5S6V19'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-IN5S6V19'
+    'USERNAME' => 'hneve'
+    'USERPROFILE' => 'C:\\Users\\hneve'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1736198575.6716
+    'REQUEST_TIME' => 1736198575
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+        1 => 'console/mqtt-subscribe'
+    ]
+    'argc' => 2
+]
+2025-01-06 21:32:52 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "console/mqtt-subscribe". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/mqtt-su...', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\yii(23): yii\base\Application->run()
+#3 {main}
+2025-01-06 21:32:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\hneve\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'CLASSPATH' => 'C:\\Program Files\\Portugal Identity Card\\'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-IN5S6V19'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'EFC_5028' => '1'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\hneve'
+    'LOCALAPPDATA' => 'C:\\Users\\hneve\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-IN5S6V19'
+    'MOSQUITTO_DIR' => 'C:\\Program Files\\mosquitto'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\hneve\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\Users\\hneve\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\hneve\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\wamp64\\bin\\php\\php7.4.33;C:\\Users\\hneve\\composer;C:\\Users\\hneve\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\hneve\\AppData\\Roaming\\npm;C:\\Users\\hneve\\AppData\\Local\\gitkraken\\bin;C:\\Users\\hneve\\AppData\\Local\\Programs\\Git\\cmd'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 12, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0c'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PT8HOME' => 'C:\\Program Files\\Cisco Packet Tracer 8.2.1'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\hneve\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-IN5S6V19'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-IN5S6V19'
+    'USERNAME' => 'hneve'
+    'USERPROFILE' => 'C:\\Users\\hneve'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1736199172.0797
+    'REQUEST_TIME' => 1736199172
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\ProjetoSI_HenriqueNeves\\yii'
+        1 => 'console/mqtt-subscribe'
+    ]
+    'argc' => 2
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title></title>
+    <meta name="csrf-param" content="_csrf-backend">
+<meta name="csrf-token" content="AfpJRxy5x0Loevp484XZ6PwysdjI44CskEuyQuSEh7BoyXlyd_CuDY4OuA3D1r-ghAXlh_iO2sfZDoQXgv7ehg==">
+
+<link href="/assets/1554c69e/dist/css/bootstrap.css" rel="stylesheet">
+<link href="/css/site.css" rel="stylesheet"></head>
+<body class="d-flex flex-column h-100">
+
+<main role="main">
+    <div class="container">
+        <div class="card">
+    <div class="card-body login-card-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+
+        <form id="login-form" action="/site/login" method="post">
+<input type="hidden" name="_csrf-backend" value="AfpJRxy5x0Loevp484XZ6PwysdjI44CskEuyQuSEh7BoyXlyd_CuDY4OuA3D1r-ghAXlh_iO2sfZDoQXgv7ehg==">
+        <div class="form-group has-feedback field-loginform-username required">
+<div class="input-group mb-3"><input type="text" id="loginform-username" class="form-control" name="LoginForm[username]" placeholder="Username" aria-required="true"><div class="input-group-append"><div class="input-group-text"><span class="fas fa-envelope"></span></div></div><div class="invalid-feedback"></div></div>
+</div>
+        <div class="form-group has-feedback field-loginform-password required">
+<div class="input-group mb-3"><input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" value="" placeholder="Password" aria-required="true"><div class="input-group-append"><div class="input-group-text"><span class="fas fa-lock"></span></div></div><div class="invalid-feedback"></div></div>
+</div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group field-loginform-rememberme">
+<div class="icheck-primary"><input type="checkbox" id="loginform-rememberme" class="custom-control-input" name="LoginForm[rememberMe]" value="1" checked><label class="" for="loginform-rememberme">Remember Me</label></div>
+</div>            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>            </div>
+        </div>
+
+        </form>
+        <div class="social-auth-links text-center mb-3">
+            <p>- OR -</p>
+            <a href="#" class="btn btn-block btn-primary">
+                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+            </a>
+            <a href="#" class="btn btn-block btn-danger">
+                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+            </a>
+        </div>
+        <!-- /.social-auth-links -->
+
+        <p class="mb-1">
+            <a href="forgot-password.html">I forgot my password</a>
+        </p>
+        <p class="mb-0">
+            <a href="register.html" class="text-center">Register a new membership</a>
+        </p>
+    </div>
+    <!-- /.login-card-body -->
+</div>    </div>
+</main>
+
+<script src="/assets/ede8e06/jquery.js"></script>
+<script src="/assets/a7a7ff13/yii.js"></script>
+<script src="/assets/a7a7ff13/yii.validation.js"></script>
+<script src="/assets/a7a7ff13/yii.activeForm.js"></script>
+<script>jQuery(function ($) {
+jQuery('#login-form').yiiActiveForm([{"id":"loginform-username","name":"username","container":".field-loginform-username","input":"#loginform-username","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Username cannot be blank."});}},{"id":"loginform-password","name":"password","container":".field-loginform-password","input":"#loginform-password","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Password cannot be blank."});}},{"id":"loginform-rememberme","name":"rememberMe","container":".field-loginform-rememberme","input":"#loginform-rememberme","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.boolean(value, messages, {"trueValue":"1","falseValue":"0","message":"Remember Me must be either \u00221\u0022 or \u00220\u0022.","skipOnEmpty":1});}}], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input"});
+});</script></body>
+</html>
