@@ -9,33 +9,36 @@ use Yii;
  *
  * @property int $id
  * @property string|null $name
- * @property string|null $cover_path
+ * @property string|null $cover_name
+ * @property resource|null $cover_data
  * @property string|null $description
  * @property string|null $developer_name
  * @property string|null $publisher_name
  * @property string|null $releasedate
  * @property float|null $price
  *
- * @property Acquisitions[] $acquisitions
+ //* @property Acquisitions[] $acquisitions
  * @property Cart[] $carts
- * @property Favorites[] $favorites
- * @property Franchises[] $franchises
- * @property GameFranchise[] $gameFranchises
- * @property GameGenre[] $gameGenres
- * @property GameList[] $gameLists
- * @property GamePlatform[] $gamePlatforms
- * @property GameTeamLists[] $gameTeamLists
+ //* @property Favorites[] $favorites
+ //* @property Franchises[] $franchises
+ //* @property GameFranchise[] $gameFranchises
+ //* @property GameGenre[] $gameGenres
+ //* @property GameList[] $gameLists
+ //* @property GamePlatform[] $gamePlatforms
+ //* @property GameTeamLists[] $gameTeamLists
  * @property Genres[] $genres
- * @property Lists[] $lists
- * @property MediaAlbum[] $mediaAlbums
+ //* @property Lists[] $lists
+ //* @property MediaAlbum[] $mediaAlbums
  * @property Platforms[] $platforms
- * @property Posts[] $posts
+ //* @property Posts[] $posts
  * @property Reviews[] $reviews
  * @property TeamLists[] $teamLists
- * @property Wishlist[] $wishlists
+ //* @property Wishlist[] $wishlists
  */
 class Games extends \yii\db\ActiveRecord
 {
+
+    public $coverFile;
     /**
      * {@inheritdoc}
      */
@@ -47,14 +50,25 @@ class Games extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
     public function rules()
     {
         return [
-            [['cover_path', 'description'], 'string'],
-            [['releasedate'], 'safe'],
-            [['price'], 'number'],
-            [['name', 'developer_name', 'publisher_name'], 'string', 'max' => 45],
+            [['name', 'cover_name', 'cover_data', 'description', 'developer_name', 'publisher_name', 'releasedate', 'price'], 'safe'],
+            [['coverFile'], 'file', 'extensions' => 'png, jpg, jpeg, gif', 'maxSize' => 1024 * 1024 * 5],
+            [['genreIds'], 'safe'],
+            [['platformIds'],'safe']
         ];
+    }
+
+    public function uploadCover()
+    {
+        if ($this->validate() && $this->coverFile !== null) {
+            $this->cover_name = $this->coverFile->name;
+            $this->cover_data = file_get_contents($this->coverFile->tempName);
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -65,7 +79,8 @@ class Games extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'cover_path' => 'Cover Path',
+            'cover_name' => 'Cover Name',
+            'cover_data' => 'Cover Data',
             'description' => 'Description',
             'developer_name' => 'Developer Name',
             'publisher_name' => 'Publisher Name',
@@ -79,10 +94,10 @@ class Games extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getAcquisitions()
+    /*public function getAcquisitions()
     {
         return $this->hasMany(Acquisitions::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[Carts]].
@@ -99,70 +114,70 @@ class Games extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getFavorites()
+    /*public function getFavorites()
     {
         return $this->hasMany(Favorites::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[Franchises]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getFranchises()
+    /*public function getFranchises()
     {
         return $this->hasMany(Franchises::class, ['id' => 'franchise_id'])->viaTable('game_franchise', ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[GameFranchises]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getGameFranchises()
+    /*public function getGameFranchises()
     {
         return $this->hasMany(GameFranchise::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[GameGenres]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getGameGenres()
+    /*public function getGameGenres()
     {
         return $this->hasMany(GameGenre::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[GameLists]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getGameLists()
+    /*public function getGameLists()
     {
         return $this->hasMany(GameList::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[GamePlatforms]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getGamePlatforms()
+    /*public function getGamePlatforms()
     {
         return $this->hasMany(GamePlatform::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[GameTeamLists]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getGameTeamLists()
+    /*public function getGameTeamLists()
     {
         return $this->hasMany(GameTeamLists::class, ['games_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[Genres]].
@@ -174,25 +189,27 @@ class Games extends \yii\db\ActiveRecord
         return $this->hasMany(Genres::class, ['id' => 'genre_id'])->viaTable('game_genre', ['game_id' => 'id']);
     }
 
+    public $genreIds;
+
     /**
      * Gets query for [[Lists]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getLists()
+    /*public function getLists()
     {
         return $this->hasMany(Lists::class, ['id' => 'list_id'])->viaTable('game_list', ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[MediaAlbums]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getMediaAlbums()
+    /*public function getMediaAlbums()
     {
         return $this->hasMany(MediaAlbum::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[Platforms]].
@@ -204,15 +221,17 @@ class Games extends \yii\db\ActiveRecord
         return $this->hasMany(Platforms::class, ['id' => 'platform_id'])->viaTable('game_platform', ['game_id' => 'id']);
     }
 
+    public $platformIds;
+
     /**
      * Gets query for [[Posts]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getPosts()
+    /*public function getPosts()
     {
         return $this->hasMany(Posts::class, ['game_id' => 'id']);
-    }
+    }*/
 
     /**
      * Gets query for [[Reviews]].
@@ -239,8 +258,58 @@ class Games extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getWishlists()
+    /*public function getWishlists()
     {
         return $this->hasMany(Wishlist::class, ['game_id' => 'id']);
+    }*/
+
+    public function linkGenres($genreIds)
+    {
+        // Clear existing genres
+        $this->unlinkAll('genres', true);
+
+        // Link new genres
+        if (!empty($genreIds)) {
+            foreach ($genreIds as $genreId) {
+                $genre = Genres::findOne($genreId);
+                if ($genre) {
+                    $this->link('genres', $genre);
+                }
+            }
+        }
+    }
+
+    public function linkPlatforms($platformIds)
+    {
+        // Clear existing platforms
+        $this->unlinkAll('platforms', true);
+
+        // Link new platforms
+        if (!empty($platformIds)) {
+            foreach ($platformIds as $platformId) {
+                $platform = Platforms::findOne($platformId);
+                if ($platform) {
+                    $this->link('platforms', $platform);
+                }
+            }
+        }
+    }
+
+    public function getCoverBase64()
+    {
+        return $this->cover_data ? base64_encode($this->cover_data) : null;
+    }
+
+    public function fields()
+    {
+        $fields = parent::fields();
+
+        // Remove the 'cover_data' field
+        unset($fields['cover_data']);
+
+        // Add a base64-encoded version of cover_data
+        $fields['cover_base64'] = 'coverBase64';
+
+        return $fields;
     }
 }

@@ -48,14 +48,28 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public $currentPassword;
+    public $newPassword;
+    public $confirmNewPassword;
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
+            ['currentPassword', 'required', 'on' => 'updatePassword'],
+            ['currentPassword', 'string', 'min' => 6, 'on' => 'updatePassword'],
+            ['newPassword', 'required', 'on' => 'updatePassword'],
+            ['newPassword', 'string', 'min' => 6, 'on' => 'updatePassword'],
+            ['confirmNewPassword', 'required', 'on' => 'updatePassword'],
+            ['confirmNewPassword', 'compare', 'compareAttribute' => 'newPassword', 'message' => 'Passwords must match.', 'on' => 'updatePassword'],
             ['status', 'default', 'value' => self::STATUS_INACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
+
+            [['username'], 'required'],
+            [['username'], 'string', 'max' => 255],
+            [['username'], 'unique', 'message' => 'This username is already taken.'],
         ];
     }
 
@@ -169,6 +183,13 @@ class User extends ActiveRecord implements IdentityInterface
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
+    public function validateCurrentPassword($attribute, $params)
+    {
+        if (!$this->validatePassword($this->currentPassword)) {
+            $this->addError($attribute, 'The current password is incorrect.');
+        }
+    }
+
     /**
      * Generates password hash from password and sets it to the model
      *
@@ -209,5 +230,10 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function getProfile()
+    {
+        return $this->hasOne(Profiles::class, ['user_id' => 'id']);
     }
 }

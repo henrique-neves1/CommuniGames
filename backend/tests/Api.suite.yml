@@ -1,0 +1,5 @@
+actor: ApiTester
+suite_namespace: backend\tests\Api
+modules:
+    # enable helpers as array
+    enabled: []

@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Games', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Game', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,14 +29,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
+            [
+                'attribute' => 'cover',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    return Html::img(
+                        Url::to(['game/cover', 'id' => $model->id]),
+                        ['alt' => 'Cover Image', 'style' => 'width:100px; height:auto;']
+                    );
+                },
+            ],
             'name',
-            'cover_path:ntext',
-            'description:ntext',
-            'developer_name',
-            'publisher_name',
-            'releasedate',
-            'price',
+            //'description:ntext',
+            //'developer_name',
+            //'publisher_name',
+            //'releasedate',
+            [
+                'attribute' => 'price',
+                'value' => function ($model) {
+                    return '€' . $model->price;
+                },
+                'format' => 'text',
+            ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Games $model, $key, $index, $column) {

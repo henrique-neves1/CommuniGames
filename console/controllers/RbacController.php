@@ -19,17 +19,41 @@ class RbacController extends Controller
         $manageUsers->description = 'Manage user accounts';
         $auth->add($manageUsers);
 
-        $addGames = $auth->createPermission('addGames');
-        $addGames->description = 'Add games to the platform';
-        $auth->add($addGames);
+        $addGame = $auth->createPermission('addGame');
+        $addGame->description = 'Add game to the platform';
+        $auth->add($addGame);
 
-        $createTeamLists = $auth->createPermission('createTeamLists');
-        $createTeamLists->description = 'Create team made lists';
-        $auth->add($createTeamLists);
+        $updateGame = $auth->createPermission('updateGame');
+        $updateGame->description = 'Update game in the platform';
+        $auth->add($updateGame);
+
+        $deleteGame = $auth->createPermission('deleteGame');
+        $deleteGame->description = 'Deleting a game from the platform';
+        $auth->add($deleteGame);
+
+        $createTeamList = $auth->createPermission('createTeamList');
+        $createTeamList->description = 'Create team made list';
+        $auth->add($createTeamList);
+
+        $updateTeamList = $auth->createPermission('updateTeamList');
+        $updateTeamList->description = 'Update team made list';
+        $auth->add($updateTeamList);
+
+        $deleteTeamList = $auth->createPermission('deleteTeamList');
+        $deleteTeamList->description = 'Delete team made list';
+        $auth->add($deleteTeamList);
 
         $addGenre = $auth->createPermission('addGenre');
-        $addGenre->description = 'Create team made lists';
+        $addGenre->description = 'Add a genre';
         $auth->add($addGenre);
+
+        $updateGenre = $auth->createPermission('updateGenre');
+        $updateGenre->description = 'Update a genre';
+        $auth->add($updateGenre);
+
+        $deleteGenre = $auth->createPermission('deleteGenre');
+        $deleteGenre->description = 'Delete a genre';
+        $auth->add($deleteGenre);
 
         $addPlatform = $auth->createPermission('addPlatform');
         $addPlatform->description = 'Create team made lists';
@@ -66,13 +90,27 @@ class RbacController extends Controller
 
         // Assign permissions to roles
         $auth->addChild($admin, $manageUsers);
-        $auth->addChild($admin, $addGames);
-        $auth->addChild($gamedev, $addGames);
-        $auth->addChild($moderator, $addGames);
-        $auth->addChild($admin, $createTeamLists);
-        $auth->addChild($moderator, $createTeamLists);
+        $auth->addChild($admin, $addGame);
+        $auth->addChild($gamedev, $addGame);
+        $auth->addChild($moderator, $addGame);
+        $auth->addChild($admin, $updateGame);
+        $auth->addChild($gamedev, $updateGame);
+        $auth->addChild($moderator, $updateGame);
+        $auth->addChild($admin, $deleteGame);
+        $auth->addChild($gamedev, $deleteGame);
+        $auth->addChild($moderator, $deleteGame);
+        $auth->addChild($admin, $createTeamList);
+        $auth->addChild($moderator, $createTeamList);
+        $auth->addChild($admin, $updateTeamList);
+        $auth->addChild($moderator, $updateTeamList);
+        $auth->addChild($admin, $deleteTeamList);
+        $auth->addChild($moderator, $deleteTeamList);
         $auth->addChild($admin, $addGenre);
         $auth->addChild($moderator, $addGenre);
+        $auth->addChild($admin, $updateGenre);
+        $auth->addChild($moderator, $updateGenre);
+        $auth->addChild($admin, $deleteGenre);
+        $auth->addChild($moderator, $deleteGenre);
         $auth->addChild($admin, $addPlatform);
         $auth->addChild($moderator, $addPlatform);
         $auth->addChild($admin, $addFranchise);
@@ -80,9 +118,9 @@ class RbacController extends Controller
         $auth->addChild($user, $createPost);
         $auth->addChild($user, $createList);
 
-        // Assign roles to users (example IDs: 1 => admin, 2 => user)
-        $auth->assign($admin, 1); // User ID 1 is an admin
-        $auth->assign($user, 2);  // User ID 2 is a regular user
+        $auth->assign($admin, 1);
+        $auth->assign($moderator, 2);
+        $auth->assign($gamedev, 3);
 
         echo "RBAC roles and permissions have been initialized.\n";
     }

@@ -18,7 +18,7 @@ class GameSearch extends Games
     {
         return [
             [['id'], 'integer'],
-            [['name', 'cover_path', 'description', 'developer_name', 'publisher_name', 'releasedate'], 'safe'],
+            [['name', 'cover_name', 'cover_data', 'description', 'developer_name', 'publisher_name', 'releasedate'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -65,7 +65,8 @@ class GameSearch extends Games
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'cover_path', $this->cover_path])
+            ->andFilterWhere(['like', 'cover_name', $this->cover_name])
+            ->andFilterWhere(['like', 'cover_data', $this->cover_data])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'developer_name', $this->developer_name])
             ->andFilterWhere(['like', 'publisher_name', $this->publisher_name]);

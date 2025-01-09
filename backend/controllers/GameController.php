@@ -4,9 +4,15 @@ namespace backend\controllers;
 
 use common\models\Games;
 use app\models\GameSearch;
+use common\models\Genres;
+use common\models\Platforms;
+use Yii;
+use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * GameController implements the CRUD actions for Games model.
@@ -18,17 +24,49 @@ class GameController extends Controller
      */
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::class,
+                'rules' => [
+                    [
+                        'actions' => ['create'],
+                        'allow' => true,
+                        'roles' => ['addGame']
                     ],
+                    [
+                        'actions' => ['update'],
+                        'allow' => true,
+                        'roles' => ['updateGame']
+                    ],
+                    [
+                        'actions' => ['delete'],
+                        'allow' => true,
+                        'roles' => ['deleteGame']
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                        'roles' => ['@','*']
+                    ],
+                    [
+                        'actions' => ['cover'],
+                        'allow' => true,
+                        'roles' => ['@','*']
+                    ],
+                    [
+                        'actions' => ['view'],
+                        'allow' => true,
+                        'roles' => ['@','*']
+                    ],
+                ]
+            ],
+            'verbs' => [
+                'class' => VerbFilter::class,
+                'actions' => [
+                    'delete' => ['POST'],
                 ],
-            ]
-        );
+            ],
+        ];
     }
 
     /**
@@ -55,9 +93,21 @@ class GameController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
+    }
+
+    public function actionCover($id)
+    {
+        $model = $this->findModel($id);
+
+        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+        Yii::$app->response->headers->add('Content-Type', 'image/jpeg');
+
+        return $model->cover_data;
     }
 
     /**
@@ -67,11 +117,20 @@ class GameController extends Controller
      */
     public function actionCreate()
     {
+        if (!Yii::$app->user->can('addGame')) {
+            throw new \yii\web\ForbiddenHttpException('You are not allowed to perform this action.');
+        }
         $model = new Games();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            if ($model->load($this->request->post())) {
+                $model->coverFile = UploadedFile::getInstance($model, 'coverFile');
+                if ($model->uploadCover() && $model->save()) {
+                    $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
+                    $model->linkPlatforms(Yii::$app->request->post('Games')['platformIds']);
+                    Yii::$app->session->setFlash('success', 'Game created successfully!');
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
             }
         } else {
             $model->loadDefaultValues();
@@ -91,10 +150,29 @@ class GameController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (!Yii::$app->user->can('updateGame')) {
+            throw new \yii\web\ForbiddenHttpException('You are not allowed to perform this action.');
+        }
         $model = $this->findModel($id);
+        $model->genreIds = array_map(fn($genre) => $genre->id, $model->genres);
+        $model->platformIds = array_map(fn($platform) => $platform->id, $model->platforms);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post())) {
+                $model->coverFile = UploadedFile::getInstance($model, 'coverFile');
+                if ($model->coverFile) {
+                    if ($model->uploadCover()) {
+                        Yii::$app->session->setFlash('success', 'Game updated successfully!');
+                    } else {
+                        Yii::$app->session->setFlash('error', 'Failed to upload the cover image.');
+                    }
+                }
+                if ($model->save()) {
+                    $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
+                    $model->linkPlatforms(Yii::$app->request->post('Games')['platformIds']);
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         }
 
         return $this->render('update', [
@@ -111,6 +189,9 @@ class GameController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!Yii::$app->user->can('deleteGame')) {
+            throw new \yii\web\ForbiddenHttpException('You are not allowed to perform this action.');
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

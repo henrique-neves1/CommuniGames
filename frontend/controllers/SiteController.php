@@ -75,7 +75,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $teamLists = \common\models\TeamLists::find()
+            ->with('games')
+            ->all();
+
+        return $this->render('index', [
+            'teamLists' => $teamLists,
+        ]);
     }
 
     /**
@@ -229,7 +235,7 @@ class SiteController extends Controller
         }
         if (($user = $model->verifyEmail()) && Yii::$app->user->login($user)) {
             Yii::$app->session->setFlash('success', 'Your email has been confirmed!');
-            return $this->goHome();
+            return $this->redirect(['profile/create']);
         }
 
         Yii::$app->session->setFlash('error', 'Sorry, we are unable to verify your account with provided token.');
@@ -255,5 +261,32 @@ class SiteController extends Controller
         return $this->render('resendVerificationEmail', [
             'model' => $model
         ]);
+    }
+
+    public function actionUpdateEmail()
+    {
+        $model = Yii::$app->user->identity;
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', 'Email updated successfully.');
+            return $this->redirect(['profile/view', 'id' => $model->profile->id]);
+        }
+
+        return $this->render('update-email', ['model' => $model]);
+    }
+
+    public function actionUpdatePassword()
+    {
+        $model = Yii::$app->user->identity;
+        $model->scenario = 'updatePassword';
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->setPassword($model->newPassword);
+            $model->save(false);
+            Yii::$app->session->setFlash('success', 'Password updated successfully.');
+            return $this->redirect(['profile/view', 'id' => $model->profile->id]);
+        }
+
+        return $this->render('update-password', ['model' => $model]);
     }
 }
