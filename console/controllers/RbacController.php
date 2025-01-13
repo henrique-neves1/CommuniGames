@@ -71,6 +71,18 @@ class RbacController extends Controller
         $createList->description = 'Create a list';
         $auth->add($createList);
 
+        $createTarefa = $auth->createPermission('createTarefa');
+        $createTarefa->description = 'Criar tarefa';
+        $auth->add($createTarefa);
+
+        $updateTarefa = $auth->createPermission('updateTarefa');
+        $updateTarefa->description = 'Atualizar tarefa';
+        $auth->add($updateTarefa);
+
+        $deleteTarefa = $auth->createPermission('deleteTarefa');
+        $deleteTarefa->description = 'Apagar tarefa';
+        $auth->add($deleteTarefa);
+
         // Create roles
         $admin = $auth->createRole('admin');
         $admin->description = 'Administrator';
@@ -117,6 +129,9 @@ class RbacController extends Controller
         $auth->addChild($moderator, $addFranchise);
         $auth->addChild($user, $createPost);
         $auth->addChild($user, $createList);
+        $auth->addChild($admin, $createTarefa);
+        $auth->addChild($admin, $updateTarefa);
+        $auth->addChild($admin, $deleteTarefa);
 
         $auth->assign($admin, 1);
         $auth->assign($moderator, 2);
