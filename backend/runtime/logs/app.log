@@ -17948,3 +17948,384 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1736785127.4799
     'REQUEST_TIME' => 1736785127
 ]
+2025-01-14 14:56:06 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\rest\UrlRule::0 in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\BaseObject->__set('0', 'api/user')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\rest\UrlRule), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\rest\\UrlRul...', Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\rest\\UrlRul...', Array, Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(246): yii\BaseYii::createObject(Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(190): yii\web\UrlManager->buildRules(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\web\UrlManager->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\web\\UrlMana...', Array, Array)
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\web\\UrlMana...', Array, Array)
+#13 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#14 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(766): yii\di\ServiceLocator->get('urlManager', true)
+#15 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(569): yii\base\Module->get('urlManager')
+#16 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2-debug\src\Module.php(284): yii\base\Application->getUrlManager()
+#17 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(325): yii\debug\Module->bootstrap(Object(yii\web\Application))
+#18 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#19 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(271): yii\web\Application->bootstrap()
+#20 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#21 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(204): yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#23 {main}
+2025-01-14 14:56:03 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '52927'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/api/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/api/'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1736866559.8866
+    'REQUEST_TIME' => 1736866559
+]
+2025-01-14 14:56:11 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\rest\UrlRule::0 in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\BaseObject->__set('0', 'api/user')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\rest\UrlRule), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\rest\\UrlRul...', Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\rest\\UrlRul...', Array, Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(246): yii\BaseYii::createObject(Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(190): yii\web\UrlManager->buildRules(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\web\UrlManager->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\web\\UrlMana...', Array, Array)
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\web\\UrlMana...', Array, Array)
+#13 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#14 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(766): yii\di\ServiceLocator->get('urlManager', true)
+#15 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(569): yii\base\Module->get('urlManager')
+#16 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2-debug\src\Module.php(284): yii\base\Application->getUrlManager()
+#17 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(325): yii\debug\Module->bootstrap(Object(yii\web\Application))
+#18 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#19 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(271): yii\web\Application->bootstrap()
+#20 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#21 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(204): yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#23 {main}
+2025-01-14 14:56:11 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '52930'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/api/game'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/api/game'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1736866571.2728
+    'REQUEST_TIME' => 1736866571
+]
+2025-01-14 14:56:14 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\rest\UrlRule::0 in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(557): yii\base\BaseObject->__set('0', 'api/user')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(yii\rest\UrlRule), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\rest\\UrlRul...', Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\rest\\UrlRul...', Array, Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(246): yii\BaseYii::createObject(Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\UrlManager.php(190): yii\web\UrlManager->buildRules(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\web\UrlManager->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(419): ReflectionClass->newInstanceArgs(Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\Container.php(170): yii\di\Container->build('yii\\web\\UrlMana...', Array, Array)
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\web\\UrlMana...', Array, Array)
+#13 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#14 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(766): yii\di\ServiceLocator->get('urlManager', true)
+#15 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(569): yii\base\Module->get('urlManager')
+#16 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2-debug\src\Module.php(284): yii\base\Application->getUrlManager()
+#17 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(325): yii\debug\Module->bootstrap(Object(yii\web\Application))
+#18 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(69): yii\base\Application->bootstrap()
+#19 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(271): yii\web\Application->bootstrap()
+#20 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#21 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(204): yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->__construct(Array)
+#23 {main}
+2025-01-14 14:56:14 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '52936'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/api/games'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/api/games'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1736866574.2512
+    'REQUEST_TIME' => 1736866574
+]
+2025-01-14 15:07:29 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Malformed UTF-8 characters, possibly incorrectly encoded in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\helpers\BaseJson.php:147
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\helpers\BaseJson.php(88): yii\helpers\BaseJson::handleJsonError(5)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\JsonResponseFormatter.php(133): yii\helpers\BaseJson::encode(Array, 320)
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\JsonResponseFormatter.php(112): yii\web\JsonResponseFormatter->formatJson(Object(yii\web\Response))
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Response.php(1109): yii\web\JsonResponseFormatter->format(Object(yii\web\Response))
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Response.php(340): yii\web\Response->prepare()
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(390): yii\web\Response->send()
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2025-01-14 15:07:29 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '53112'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/api/profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/api/profile'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1736867249.6904
+    'REQUEST_TIME' => 1736867249
+]
+2025-01-14 15:08:50 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Profiles::pictureBase64 in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('pictureBase64')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\ArrayableTrait.php(126): yii\db\BaseActiveRecord->__get('pictureBase64')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Serializer.php(268): yii\base\Model->toArray(Array, Array)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Serializer.php(299): yii\rest\Serializer->serializeModel(Object(common\models\Profiles))
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Serializer.php(196): yii\rest\Serializer->serializeModels(Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Serializer.php(154): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Controller.php(99): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\rest\Controller.php(77): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(180): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('api/profile', Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2025-01-14 15:08:50 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '53130'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/api/profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/api/profile'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1736867330.3794
+    'REQUEST_TIME' => 1736867330
+]

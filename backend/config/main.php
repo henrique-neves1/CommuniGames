@@ -58,6 +58,12 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule','controller' => 'api/game',
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/profile',
+                ],
             ],
         ],
     ],

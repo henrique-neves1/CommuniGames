@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="" />
+    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/modules/api/controllers/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/modules/api/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810bb9877f8.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810bf2736e6.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c0806458.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c087f41b.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c08b4203.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c08e54f2.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c09208db.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c09503b4.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c41841dd.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c4202515.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67810c42331b9.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/models/Profiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Profiles.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +38,9 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -135,6 +157,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/wamp64/www/ProjetoSI_HenriqueNeves",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -168,6 +191,7 @@
       <updated>1732277195651</updated>
       <workItem from="1732277196787" duration="217000" />
       <workItem from="1734620285011" duration="4971000" />
+      <workItem from="1736866253737" duration="1688000" />
     </task>
     <servers />
   </component>

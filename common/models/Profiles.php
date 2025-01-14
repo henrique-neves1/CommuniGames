@@ -288,4 +288,22 @@ class Profiles extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Wishlist::class, ['profile_id' => 'id']);
     }
+
+    public function getPictureBase64()
+    {
+        return $this->picture_data ? base64_encode($this->picture_data) : null;
+    }
+
+    public function fields()
+    {
+        $fields = parent::fields();
+
+        // Remove the 'picture_data' field
+        unset($fields['picture_data']);
+
+        // Add a base64-encoded version of picture_data
+        $fields['picture_base64'] = 'pictureBase64';
+
+        return $fields;
+    }
 }
