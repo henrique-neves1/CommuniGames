@@ -10,6 +10,11 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'modules' => [
+        'api' => [
+            'class' => 'frontend\modules\api\ModuleAPI',
+        ]
+    ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -41,6 +46,15 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'game/search' => 'game/search',
+                [
+                    'class' => 'yii\rest\UrlRule','controller' => 'api/game',
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/profile',
+                ],
             ],
         ],
     ],
