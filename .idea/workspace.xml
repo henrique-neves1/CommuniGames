@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="Novos controladores da API adicionados">
-      <change afterPath="$PROJECT_DIR$/frontend/modules/api/controllers/GameController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/modules/api/controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/modules/api/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/677ec4c72479a.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f166669c4.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f16704956.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f16718dc6.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f173426a8.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f1749c42e.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f18e5035c.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f19072800.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f1908d86f.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f19092631.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f19cca07d.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runtime/debug/index.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/mail/20250110-100816-4520-5555.eml" beforeDir="false" />
-    </list>
+    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="Alterações em termos de API." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +178,7 @@
       <workItem from="1732277196787" duration="217000" />
       <workItem from="1734620285011" duration="4971000" />
       <workItem from="1736866253737" duration="2382000" />
-      <workItem from="1737036882978" duration="1281000" />
+      <workItem from="1737036882978" duration="2068000" />
     </task>
     <task id="LOCAL-00001" summary="Novos controladores da API adicionados">
       <option name="closed" value="true" />
@@ -209,7 +188,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736868002590</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Alterações em termos de API.">
+      <option name="closed" value="true" />
+      <created>1737040479368</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737040479368</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Alterações em termos de API.">
+      <option name="closed" value="true" />
+      <created>1737040496314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737040496314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +212,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Novos controladores da API adicionados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Novos controladores da API adicionados" />
+    <MESSAGE value="Alterações em termos de API." />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações em termos de API." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
