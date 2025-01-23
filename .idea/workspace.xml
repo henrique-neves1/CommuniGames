@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="Alterações em termos de API." />
+    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="Alterações em termos de API.">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f20ac53b4.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f20b1c578.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f21eef67b.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f21f15dea.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f21f1ca7f.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6780f22b570a1.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/678148fc3e6f3.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/678148fc832ae.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/678148fc93f01.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/678148fcab381.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/6781491711928.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runtime/debug/index.data" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,24 +149,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/wamp64/www/ProjetoSI_HenriqueNeves/frontend/modules/api/controllers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/ProjetoSI_HenriqueNeves/frontend/modules/api/controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ProjetoSI_HenriqueNeves\frontend\modules\api\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetoSI_HenriqueNeves\WebApp" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,6 +197,7 @@
       <workItem from="1734620285011" duration="4971000" />
       <workItem from="1736866253737" duration="2382000" />
       <workItem from="1737036882978" duration="2068000" />
+      <workItem from="1737634008541" duration="2071000" />
     </task>
     <task id="LOCAL-00001" summary="Novos controladores da API adicionados">
       <option name="closed" value="true" />
