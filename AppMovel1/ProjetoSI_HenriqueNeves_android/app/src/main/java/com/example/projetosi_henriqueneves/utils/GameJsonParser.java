@@ -22,14 +22,14 @@ public class GameJsonParser {
                 JSONObject game = response.getJSONObject(i);
                 int id = game.getInt("id");
                 String name = game.getString("name");
-                String coverBase64 = game.getString("cover_base64");
+                String coverPath = game.getString("cover_path");
                 String description = game.getString("description");
                 String developerName = game.getString("developer_name");
                 String publisherName = game.getString("publisher_name");
                 String releaseDate = game.getString("releasedate");
                 double price = game.getDouble("price");
 
-                Game auxGame = new Game(id, name, coverBase64, description, developerName, publisherName, releaseDate, price);
+                Game auxGame = new Game(id, name, coverPath, description, developerName, publisherName, releaseDate, price);
                 games.add(auxGame);
             } catch (JSONException e) {
                 throw new RuntimeException(e);
@@ -44,14 +44,14 @@ public class GameJsonParser {
             JSONObject game = new JSONObject(response);
             int id = game.getInt("id");
             String name = game.getString("name");
-            String coverBase64 = game.getString("cover_base64");
+            String coverPath = game.getString("coverPath");
             String description = game.getString("description");
             String developerName = game.getString("developer_name");
             String publisherName = game.getString("publisher_name");
             String releaseDate = game.getString("releasedate");
             double price = game.getDouble("price");
 
-            auxGame = new Game(id, name, coverBase64, description, developerName, publisherName, releaseDate, price);
+            auxGame = new Game(id, name, coverPath, description, developerName, publisherName, releaseDate, price);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

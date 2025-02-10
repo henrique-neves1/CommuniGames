@@ -12,10 +12,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.projetosi_henriqueneves.listeners.CartListener;
 import com.example.projetosi_henriqueneves.listeners.GameListener;
 import com.example.projetosi_henriqueneves.listeners.GamesListener;
 import com.example.projetosi_henriqueneves.model.GameDBHelper;
+import com.example.projetosi_henriqueneves.utils.CartJsonParser;
 import com.example.projetosi_henriqueneves.utils.GameJsonParser;
 import com.example.projetosi_henriqueneves.model.Game;
 import com.example.projetosi_henriqueneves.utils.UserJsonParser;
@@ -151,6 +154,8 @@ public class SingletonGames {
         saveLoginState(context, -1);
     }
 
+    private String loggedInUsername = null;
+
     public void loginUser(String username, String password, Context context, final LoginCallback callback) {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, mUrlAPIUsers, null,
                 new Response.Listener<JSONArray>() {
@@ -167,6 +172,7 @@ public class SingletonGames {
                                 if (verifyPassword(password, user.getPasswordHash())) {
                                     Log.d("LoginDebug", "Password verified for: " + user.getUsername());
                                     loggedInUserId = user.getId();
+                                    loggedInUsername = user.getUsername();
                                     saveLoginState(context, loggedInUserId);
                                     loadUserProfile(context, callback);
                                     return;
@@ -222,6 +228,42 @@ public class SingletonGames {
         volleyQueue.add(request);
     }
 
+    public void fetchCartItems(Context context, int profileId, CartListener listener) {
+        String url = "http://172.22.21.222:8081/api/cart";
+
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
+                response -> {
+                    ArrayList<Cart> cartList = CartJsonParser.parseJsonCart(response);
+                    listener.onCartUpdated(cartList);
+                },
+                error -> Toast.makeText(context, "Error fetching cart", Toast.LENGTH_SHORT).show()
+        );
+
+        volleyQueue.add(request);
+    }
+
+    public void addToCart(Context context, int profileId, int gameId) {
+        String url = "http://172.22.21.222:8081/api/cart/profile/" + profileId + "/game/" + gameId;
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, null,
+                response -> Toast.makeText(context, "Added to cart", Toast.LENGTH_SHORT).show(),
+                error -> Toast.makeText(context, "Failed to add to cart", Toast.LENGTH_SHORT).show()
+        );
+
+        volleyQueue.add(request);
+    }
+
+    public void updateCartItemQuantity(Context context, int cartId, int quantity) {
+        String url = "http://172.22.21.222:8081/api/cart/" + cartId + "/quantity/" + quantity;
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.PUT, url, null,
+                response -> Toast.makeText(context, "Quantity updated", Toast.LENGTH_SHORT).show(),
+                error -> Toast.makeText(context, "Failed to update quantity", Toast.LENGTH_SHORT).show()
+        );
+
+        volleyQueue.add(request);
+    }
+
     private boolean verifyPassword(String password, String passwordHash) {
         if (passwordHash.startsWith("$2y")) {
             passwordHash = passwordHash.replaceFirst("\\$2y", "\\$2a");
@@ -236,6 +278,10 @@ public class SingletonGames {
 
     public JSONObject getLoggedInUserProfile() {
         return loggedInUserProfile;
+    }
+
+    public String getLoggedInUsername() {
+        return loggedInUsername;
     }
 
     public interface LoginCallback {

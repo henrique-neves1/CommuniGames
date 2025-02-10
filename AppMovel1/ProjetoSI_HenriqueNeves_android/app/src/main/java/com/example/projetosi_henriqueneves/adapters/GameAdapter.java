@@ -60,13 +60,16 @@ public class GameAdapter extends BaseAdapter {
 
         Game game = games.get(position);
         tvGameName.setText(game.getName());
-        tvGamePrice.setText(String.format("$%.2f", game.getPrice()));
+        tvGamePrice.setText(String.format("€%.2f", game.getPrice()));
 
-        String coverBase64 = game.getCoverbase64();
-        if (coverBase64 != null && !coverBase64.isEmpty()) {
-            byte[] decodedString = Base64.decode(coverBase64, Base64.DEFAULT);
-            Bitmap decodedBitmap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-            imgGameCover.setImageBitmap(decodedBitmap);
+        String coverPath = game.getCoverPath();
+        if (coverPath != null && !coverPath.isEmpty()) {
+            Glide.with(context)
+                    .load(coverPath)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .placeholder(R.drawable.communigames_logo_with_text) // Placeholder image in case of loading issues
+                    .error(R.drawable.ic_error) // Error image in case URL is invalid
+                    .into(imgGameCover);
         }
 
         return convertView;

@@ -19,7 +19,7 @@ public class GameDBHelper extends SQLiteOpenHelper {
     // Column names
     private static final String ID = "id";
     private static final String NAME = "name";
-    private static final String COVER_BASE64 = "cover_base64";
+    private static final String COVER_PATH = "cover_path";
     private static final String DESCRIPTION = "description";
     private static final String DEVELOPER_NAME = "developer_name";
     private static final String PUBLISHER_NAME = "publisher_name";
@@ -38,7 +38,7 @@ public class GameDBHelper extends SQLiteOpenHelper {
         String createTableSQL = "CREATE TABLE " + GAMES + " ("
                 + ID + " INTEGER PRIMARY KEY, "
                 + NAME + " TEXT NOT NULL, "
-                + COVER_BASE64 + " TEXT, "
+                + COVER_PATH + " TEXT, "
                 + DESCRIPTION + " TEXT, "
                 + DEVELOPER_NAME + " TEXT NOT NULL, "
                 + PUBLISHER_NAME + " TEXT NOT NULL, "
@@ -60,7 +60,7 @@ public class GameDBHelper extends SQLiteOpenHelper {
     public Game addGame(Game g) {
         ContentValues values = new ContentValues();
         values.put(NAME, g.getName());
-        values.put(COVER_BASE64, g.getCoverbase64());
+        values.put(COVER_PATH, g.getCoverPath());
         values.put(DESCRIPTION, g.getDescription());
         values.put(DEVELOPER_NAME, g.getDeveloper_name());
         values.put(PUBLISHER_NAME, g.getPublisher_name());
@@ -83,7 +83,7 @@ public class GameDBHelper extends SQLiteOpenHelper {
         ArrayList<Game> games = new ArrayList<>();
 
         Cursor cursor = db.query(GAMES,
-                new String[]{ID, NAME, COVER_BASE64, DESCRIPTION, DEVELOPER_NAME, PUBLISHER_NAME, RELEASE_DATE, PRICE},
+                new String[]{ID, NAME, COVER_PATH, DESCRIPTION, DEVELOPER_NAME, PUBLISHER_NAME, RELEASE_DATE, PRICE},
                 null, null, null, null, null);
 
         if (cursor.moveToFirst()) {

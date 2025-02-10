@@ -26,6 +26,8 @@ import com.google.android.material.navigation.NavigationView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MenuMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
@@ -36,27 +38,25 @@ public class MenuMainActivity extends AppCompatActivity implements NavigationVie
     @Override
     protected void onStart() {
         super.onStart();
-        if (SingletonGames.getInstance(this).isLoggedIn()) {
+        SingletonGames singletonGames = SingletonGames.getInstance(this);
+
+        if (singletonGames.isLoggedIn()) {
             JSONObject profile = SingletonGames.getInstance(this).getLoggedInUserProfile();
+            if (profile != null) {
+                updateNavigationHeader(profile);
+            } else {
+                SingletonGames.getInstance(this).loadUserProfile(this, new SingletonGames.LoginCallback() {
+                    @Override
+                    public void onSuccess() {
+                        // Now profile should be available, re-run onStart logic
+                        runOnUiThread(() -> updateNavigationHeader(singletonGames.getLoggedInUserProfile()));
+                    }
 
-            try {
-                String name = profile.getString("name");
-                String username = profile.getString("username");
-                String base64Image = profile.getString("picture_base64");
-
-                TextView tvProfileName = findViewById(R.id.tvProfileName);
-                TextView tvUsername = findViewById(R.id.tvUsername);
-                ImageView imgProfilePicture = findViewById(R.id.imgProfilePicture);
-
-                tvProfileName.setText(name);
-                tvUsername.setText("@" + username);
-
-                byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                imgProfilePicture.setImageBitmap(decodedByte);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
+                    @Override
+                    public void onFailure(String errorMessage) {
+                        // Handle failure case (optional)
+                    }
+                });
             }
         }
     }
@@ -101,7 +101,7 @@ public class MenuMainActivity extends AppCompatActivity implements NavigationVie
         if (item.getItemId() == R.id.nav_games) {
             fragmentTransaction.replace(R.id.fragment_container, new GameListFragment());
             fragmentTransaction.commit();
-        } else if (item.getItemId() == R.id.nav_teste_pratico){
+        } else if (item.getItemId() == R.id.nav_teste_pratico) {
             fragmentTransaction.replace(R.id.fragment_container, new TestePraticoIndividual());
             fragmentTransaction.commit();
         } else if (item.getItemId() == R.id.menu_logout){
@@ -118,6 +118,37 @@ public class MenuMainActivity extends AppCompatActivity implements NavigationVie
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void updateNavigationHeader(JSONObject profile) {
+        if (profile == null) return; // Safety check
+
+        try {
+            String name = profile.getString("name");
+            String base64Image = profile.getString("picture_base64");
+
+            SingletonGames singletonGames = SingletonGames.getInstance(this);
+            String username = singletonGames.getLoggedInUsername();
+
+            NavigationView navigationView = findViewById(R.id.nav_view);
+            android.view.View headerView = navigationView.getHeaderView(0); // Get header view
+
+            TextView tvProfileName = headerView.findViewById(R.id.tvProfileName);
+            TextView tvUsername = headerView.findViewById(R.id.tvUsername);
+            CircleImageView imgProfilePicture = headerView.findViewById(R.id.imgProfilePicture);
+
+            tvProfileName.setText(name);
+            tvUsername.setText("@" + username);
+
+            // Decode Base64 image
+            if (!base64Image.isEmpty()) {
+                byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
+                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                imgProfilePicture.setImageBitmap(decodedByte);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

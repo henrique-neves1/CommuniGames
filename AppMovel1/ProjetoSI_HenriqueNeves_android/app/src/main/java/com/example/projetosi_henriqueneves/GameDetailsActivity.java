@@ -16,6 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.projetosi_henriqueneves.model.Game;
 import com.example.projetosi_henriqueneves.model.SingletonGames;
 
@@ -43,16 +45,19 @@ public class GameDetailsActivity extends AppCompatActivity {
 
                 tvName.setText(game.getName());
                 tvDescription.setText(game.getDescription());
-                tvPrice.setText(String.format("Price: $%.2f", game.getPrice()));
+                tvPrice.setText(String.format("Price: €%.2f", game.getPrice()));
                 tvDeveloperName.setText("Developer: " + game.getDeveloper_name());
                 tvPublisherName.setText("Publisher: " + game.getPublisher_name());
                 tvReleaseDate.setText("Release Date: " + game.getReleasedate());
 
-                String coverBase64 = game.getCoverbase64();
-                if (coverBase64 != null && !coverBase64.isEmpty()) {
-                    byte[] decodedString = Base64.decode(coverBase64, Base64.DEFAULT);
-                    Bitmap decodedBitmap = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-                    imgCover.setImageBitmap(decodedBitmap);
+                String coverPath = game.getCoverPath();
+                if (coverPath != null && !coverPath.isEmpty()) {
+                    Glide.with(this)
+                            .load(coverPath)
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                            .placeholder(R.drawable.communigames_logo_with_text) // Placeholder image
+                            .error(R.drawable.ic_error) // Error image if URL is invalid
+                            .into(imgCover);
                 }
             } else {
                 Toast.makeText(this, "Game not found", Toast.LENGTH_SHORT).show();

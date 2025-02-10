@@ -1,0 +1,226 @@
+[
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-hdpi_ic_error.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-hdpi\\ic_error.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xhdpi_ic_profile_placeholder.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xhdpi\\ic_profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-anydpi_ic_logout.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-anydpi\\ic_logout.xml"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/menu_menu_navigation_drawer.xml.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/menu/menu_navigation_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xxhdpi_ic_error.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xxhdpi\\ic_error.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xhdpi_ic_logout.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xhdpi\\ic_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_activity_game_details.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\activity_game_details.xml"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/drawable-mdpi_ic_cart.png.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/drawable-mdpi/ic_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\menu_menu_navigation_drawer.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\menu\\menu_navigation_drawer.xml"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/drawable-hdpi_ic_cart.png.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/drawable-hdpi/ic_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-anydpi_ic_profile_placeholder.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-anydpi\\ic_profile_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_fragment_teste_pratico_individual.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\fragment_teste_pratico_individual.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_fragment_game.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\fragment_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_activity_game_view.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\activity_game_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xhdpi_ic_games.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xhdpi\\ic_games.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-mdpi_ic_profile_placeholder.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-mdpi\\ic_profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xxhdpi_ic_logout.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xxhdpi\\ic_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-mdpi_ic_games.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-mdpi\\ic_games.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_activity_menu_main.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\activity_menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-anydpi_ic_error.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-anydpi\\ic_error.xml"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/drawable-xxhdpi_ic_cart.png.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/drawable-xxhdpi/ic_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xxhdpi_ic_profile_placeholder.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xxhdpi\\ic_profile_placeholder.png"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/drawable-anydpi_ic_cart.xml.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/drawable-anydpi/ic_cart.xml"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/layout_item_cart.xml.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/layout/item_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-mdpi_ic_error.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-mdpi\\ic_error.png"
+    },
+    {
+        "merged": "com.example.projetosi_henriqueneves.app-debug-35:/drawable-xhdpi_ic_cart.png.flat",
+        "source": "com.example.projetosi_henriqueneves.app-main-37:/drawable-xhdpi/ic_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xhdpi_ic_error.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xhdpi\\ic_error.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-mdpi_ic_logout.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-mdpi\\ic_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_fragment_game_list.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\fragment_game_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-anydpi_ic_games.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-anydpi\\ic_games.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable_communigames_logo_with_text.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable\\communigames_logo_with_text.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_item_game_list.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\item_game_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-hdpi_ic_profile_placeholder.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-hdpi\\ic_profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-xxhdpi_ic_games.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-xxhdpi\\ic_games.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-hdpi_ic_logout.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-hdpi\\ic_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-debug-35:\\drawable-hdpi_ic_games.png.flat",
+        "source": "C:\\Users\\hneve\\.gradle\\daemon\\8.7\\com.example.projetosi_henriqueneves.app-main-37:\\drawable-hdpi\\ic_games.png"
+    }
+]

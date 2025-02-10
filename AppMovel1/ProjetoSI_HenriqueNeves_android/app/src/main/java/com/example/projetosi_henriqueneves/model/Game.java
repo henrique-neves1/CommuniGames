@@ -6,12 +6,12 @@ public class Game {
 
     private int id;
     private double price;
-    private String name, coverbase64, description, developer_name, publisher_name, releasedate;
+    private String name, cover_path, description, developer_name, publisher_name, releasedate;
 
-    public Game(int id, String name, String coverbase64, String description, String developer_name, String publisher_name, String releasedate, double price) {
+    public Game(int id, String name, String cover_path, String description, String developer_name, String publisher_name, String releasedate, double price) {
         this.id = id;
         this.name = name;
-        this.coverbase64 = coverbase64;
+        this.cover_path = cover_path;
         this.description = description;
         this.developer_name = developer_name;
         this.publisher_name = publisher_name;
@@ -35,12 +35,12 @@ public class Game {
         this.name = name;
     }
 
-    public String getCoverbase64() {
-        return coverbase64;
+    public String getCoverPath() {
+        return cover_path;
     }
 
-    public void setCoverbase64(String coverbase64) {
-        this.coverbase64 = coverbase64;
+    public void setCoverPath(String cover_path) {
+        this.cover_path = cover_path;
     }
 
     public String getDescription() {
