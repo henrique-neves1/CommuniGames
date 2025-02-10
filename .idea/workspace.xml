@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="15º commit - Corrigidos alguns problemas.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="16º commit - Aplicação móvel adicionada.">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739199195767</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="16º commit - Aplicação móvel adicionada.">
+      <option name="closed" value="true" />
+      <created>1739200405775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739200405775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +268,8 @@
     <MESSAGE value="Adicionada a Mobile App" />
     <MESSAGE value="Adicionada a parte das faturas, mais alguns produtos e outras funcionalidades." />
     <MESSAGE value="15º commit - Corrigidos alguns problemas." />
-    <option name="LAST_COMMIT_MESSAGE" value="15º commit - Corrigidos alguns problemas." />
+    <MESSAGE value="16º commit - Aplicação móvel adicionada." />
+    <option name="LAST_COMMIT_MESSAGE" value="16º commit - Aplicação móvel adicionada." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
