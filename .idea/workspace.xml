@@ -4,46 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="Adicionada a parte das faturas, mais alguns produtos e outras funcionalidades.">
+    <list default="true" id="548553ab-7e2a-447d-9b58-cc236a5dc0e4" name="Changes" comment="15º commit - Corrigidos alguns problemas.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a10fe9630.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a1125f896.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a128bf524.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a12d10b68.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a12e8e6bc.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a1341edbe.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a1343848b.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a139bb060.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a252a71bc.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a25448c14.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a25c11a3f.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a25e13ac6.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a272ae743.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a2740374f.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a27b3052d.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a27c5825b.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a282b3796.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a282cad2f.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a284d2d5e.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a38034878.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3832897e.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a38ce2ff3.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a39dceec7.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3a66818e.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3a67b87c.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3aa1ad88.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3aec99c1.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3b9cdb82.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3c883f96.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3c89b873.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3cb46ade.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3dd5eb9c.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/67a7a3debb9a9.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/models/Games.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/models/Games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/runtime/debug/index.data" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739188940030</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="15º commit - Corrigidos alguns problemas.">
+      <option name="closed" value="true" />
+      <created>1739199195767</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739199195767</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +259,8 @@
     <MESSAGE value="Alterações em termos de API." />
     <MESSAGE value="Adicionada a Mobile App" />
     <MESSAGE value="Adicionada a parte das faturas, mais alguns produtos e outras funcionalidades." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionada a parte das faturas, mais alguns produtos e outras funcionalidades." />
+    <MESSAGE value="15º commit - Corrigidos alguns problemas." />
+    <option name="LAST_COMMIT_MESSAGE" value="15º commit - Corrigidos alguns problemas." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
