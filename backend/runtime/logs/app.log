@@ -40746,3 +40746,612 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1739039355.1676
     'REQUEST_TIME' => 1739039355
 ]
+2025-02-10 12:55:46 [::1][1][fvr96d4sko2cc5aim730lgv05c][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`communigames`.`game_genre`, CONSTRAINT `fk_games_has_genre_games` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`)) in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `ga...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(405): yii\db\Command->execute()
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(765): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(724): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(218): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\GameController->actionDelete('47')
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`communigames`.`game_genre`, CONSTRAINT `fk_games_has_genre_games` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`))
+The SQL being executed was: DELETE FROM `games` WHERE `id`=47 in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `ga...')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `ga...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(405): yii\db\Command->execute()
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(765): yii\db\ActiveRecord::deleteAll(Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\ActiveRecord.php(724): yii\db\ActiveRecord->deleteInternal()
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(218): yii\db\ActiveRecord->delete()
+#6 [internal function]: backend\controllers\GameController->actionDelete('47')
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1451
+    [2] => Cannot delete or update a parent row: a foreign key constraint fails (`communigames`.`game_genre`, CONSTRAINT `fk_games_has_genre_games` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`))
+)
+
+2025-02-10 12:55:46 [::1][1][fvr96d4sko2cc5aim730lgv05c][info][application] $_GET = [
+    'id' => '47'
+]
+
+$_POST = [
+    '_csrf' => 'KxTcdGuPfcSnfaORhnBqVtdnhRAMdGC2bGUytNl5mLBOfJsWG8kLl_gP5sX0FxhnokrpakcBL4UEKVrVsEHc-g=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'j70b0o3b62po8m8op53hbq096h'
+    '_identity-frontend' => '0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf-frontend' => '1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj\";}'
+    'advanced-backend' => 'fvr96d4sko2cc5aim730lgv05c'
+    '_identity-backend' => '9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf' => 'fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'error' => -1
+    ]
+    '__returnUrl' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/'
+    '__id' => 1
+    '__authKey' => 'tZOWO8CuhKrlf92p-akf4SMnwN9MzILx'
+    'success' => 'Game created successfully!'
+    'error' => 'File upload failed.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/game/view?id=47'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=j70b0o3b62po8m8op53hbq096h; _identity-frontend=0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj%22%3B%7D; advanced-backend=fvr96d4sko2cc5aim730lgv05c; _identity-backend=9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf=fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '60796'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete'
+    'REDIRECT_QUERY_STRING' => 'id=47'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=47'
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete?id=47'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1739192146.744
+    'REQUEST_TIME' => 1739192146
+]
+2025-02-10 14:27:52 [::1][1][fvr96d4sko2cc5aim730lgv05c][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'game_id' in 'where clause' in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `ga...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(239): yii\db\Command->execute()
+#3 [internal function]: backend\controllers\GameController->actionDelete('48')
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'game_id' in 'where clause'
+The SQL being executed was: DELETE FROM `game_team_lists` WHERE `game_id`='48' in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'DELETE FROM `ga...')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1120): yii\db\Command->internalExecute('DELETE FROM `ga...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(239): yii\db\Command->execute()
+#3 [internal function]: backend\controllers\GameController->actionDelete('48')
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'game_id' in 'where clause'
+)
+
+2025-02-10 14:27:52 [::1][1][fvr96d4sko2cc5aim730lgv05c][info][application] $_GET = [
+    'id' => '48'
+]
+
+$_POST = [
+    '_csrf' => '87oWP3vTybG0fk9p3ZwWS18u7IamcozyoTCdj2QVtRiW0lFdC5W_4usMCj2v-2R6KgOA_O0Hw8HJfPXuDS3xUg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'j70b0o3b62po8m8op53hbq096h'
+    '_identity-frontend' => '0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf-frontend' => '1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj\";}'
+    'advanced-backend' => 'fvr96d4sko2cc5aim730lgv05c'
+    '_identity-backend' => '9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf' => 'fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'error' => -1
+    ]
+    '__returnUrl' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/'
+    '__id' => 1
+    '__authKey' => 'tZOWO8CuhKrlf92p-akf4SMnwN9MzILx'
+    'success' => 'Game created successfully!'
+    'error' => 'File upload failed.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/game/view?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=j70b0o3b62po8m8op53hbq096h; _identity-frontend=0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj%22%3B%7D; advanced-backend=fvr96d4sko2cc5aim730lgv05c; _identity-backend=9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf=fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '63267'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete'
+    'REDIRECT_QUERY_STRING' => 'id=48'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=48'
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete?id=48'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1739197672.4994
+    'REQUEST_TIME' => 1739197672
+]
+2025-02-10 14:29:48 [::1][1][fvr96d4sko2cc5aim730lgv05c][error][yii\base\InvalidArgumentException] yii\base\UnknownMethodException: Calling unknown method: common\models\Games::getfranchises() in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Component.php:308
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1249): yii\base\Component->__call('getfranchises', Array)
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1503): yii\db\BaseActiveRecord->getRelation('franchises')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(223): yii\db\BaseActiveRecord->unlinkAll('franchises', true)
+#3 [internal function]: backend\controllers\GameController->actionDelete('48')
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+
+Next yii\base\InvalidArgumentException: common\models\Games has no relation named "franchises". in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\BaseActiveRecord.php:1252
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1503): yii\db\BaseActiveRecord->getRelation('franchises')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(223): yii\db\BaseActiveRecord->unlinkAll('franchises', true)
+#2 [internal function]: backend\controllers\GameController->actionDelete('48')
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2025-02-10 14:29:48 [::1][1][fvr96d4sko2cc5aim730lgv05c][info][application] $_GET = [
+    'id' => '48'
+]
+
+$_POST = [
+    '_csrf' => 'xwBUhOcu0Al17TPYpLctSDUw2kncB9RivuDlGMrdqwWiaBPml2imWiqfdozW0F95QB22M5dym1HWrI15o-XvTw=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'j70b0o3b62po8m8op53hbq096h'
+    '_identity-frontend' => '0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf-frontend' => '1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj\";}'
+    'advanced-backend' => 'fvr96d4sko2cc5aim730lgv05c'
+    '_identity-backend' => '9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf' => 'fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'error' => -1
+    ]
+    '__returnUrl' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/'
+    '__id' => 1
+    '__authKey' => 'tZOWO8CuhKrlf92p-akf4SMnwN9MzILx'
+    'success' => 'Game created successfully!'
+    'error' => 'File upload failed.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/game/view?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=j70b0o3b62po8m8op53hbq096h; _identity-frontend=0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj%22%3B%7D; advanced-backend=fvr96d4sko2cc5aim730lgv05c; _identity-backend=9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf=fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '63288'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete'
+    'REDIRECT_QUERY_STRING' => 'id=48'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=48'
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete?id=48'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1739197788.4131
+    'REQUEST_TIME' => 1739197788
+]
+2025-02-10 14:33:52 [::1][1][fvr96d4sko2cc5aim730lgv05c][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'game_id' in 'where clause' in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Query.php(446): yii\db\Command->queryScalar()
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(228): yii\db\Query->exists()
+#5 [internal function]: backend\controllers\GameController->actionDelete('48')
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'game_id' in 'where clause'
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `game_team_lists` WHERE `game_id`='48') in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Query.php(446): yii\db\Command->queryScalar()
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(228): yii\db\Query->exists()
+#5 [internal function]: backend\controllers\GameController->actionDelete('48')
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'game_id' in 'where clause'
+)
+
+2025-02-10 14:33:52 [::1][1][fvr96d4sko2cc5aim730lgv05c][info][application] $_GET = [
+    'id' => '48'
+]
+
+$_POST = [
+    '_csrf' => '1AXE60RveSMc8IH16MOfg9bc4k2SgSFgJDAm7nIwRmaxbYOJNCkPcEOCxKGapO2yo_GON9n0blNMfE6PGwgCLA=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'j70b0o3b62po8m8op53hbq096h'
+    '_identity-frontend' => '0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf-frontend' => '1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj\";}'
+    'advanced-backend' => 'fvr96d4sko2cc5aim730lgv05c'
+    '_identity-backend' => '9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf' => 'fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'error' => -1
+    ]
+    '__returnUrl' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/'
+    '__id' => 1
+    '__authKey' => 'tZOWO8CuhKrlf92p-akf4SMnwN9MzILx'
+    'success' => 'Game created successfully!'
+    'error' => 'File upload failed.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/game/view?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=j70b0o3b62po8m8op53hbq096h; _identity-frontend=0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj%22%3B%7D; advanced-backend=fvr96d4sko2cc5aim730lgv05c; _identity-backend=9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf=fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '63306'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete'
+    'REDIRECT_QUERY_STRING' => 'id=48'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=48'
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete?id=48'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1739198032.2949
+    'REQUEST_TIME' => 1739198032
+]
+2025-02-10 14:36:42 [::1][1][fvr96d4sko2cc5aim730lgv05c][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'games_id' in 'where clause' in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Query.php(446): yii\db\Command->queryScalar()
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(242): yii\db\Query->exists()
+#5 [internal function]: backend\controllers\GameController->actionDelete('48')
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'games_id' in 'where clause'
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `game_list` WHERE `games_id`='48') in C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Schema.php:676
+Stack trace:
+#0 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT EXISTS(S...')
+#2 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\db\Query.php(446): yii\db\Command->queryScalar()
+#4 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\controllers\GameController.php(242): yii\db\Query->exists()
+#5 [internal function]: backend\controllers\GameController->actionDelete('48')
+#6 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('delete', Array)
+#9 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('game/delete', Array)
+#10 C:\wamp64\www\ProjetoSI_HenriqueNeves\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\ProjetoSI_HenriqueNeves\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'games_id' in 'where clause'
+)
+
+2025-02-10 14:36:42 [::1][1][fvr96d4sko2cc5aim730lgv05c][info][application] $_GET = [
+    'id' => '48'
+]
+
+$_POST = [
+    '_csrf' => 'zL-UUpekuNaLfXbo-45uTsoSMvalc0Y2aNpEVFTGGKSp19Mw5-LOhdQPM7yJ6Rx_vz9ejO4GCQUAliw1Pf5c7g=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'j70b0o3b62po8m8op53hbq096h'
+    '_identity-frontend' => '0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf-frontend' => '1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj\";}'
+    'advanced-backend' => 'fvr96d4sko2cc5aim730lgv05c'
+    '_identity-backend' => '9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"tZOWO8CuhKrlf92p-akf4SMnwN9MzILx\",2592000]\";}'
+    '_csrf' => 'fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+        'error' => -1
+    ]
+    '__returnUrl' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/'
+    '__id' => 1
+    '__authKey' => 'tZOWO8CuhKrlf92p-akf4SMnwN9MzILx'
+    'success' => 'Game created successfully!'
+    'error' => 'File upload failed.'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Google Chrome\";v=\"132\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_DNT' => '1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/ProjetoSI_HenriqueNeves/backend/web/game/view?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=j70b0o3b62po8m8op53hbq096h; _identity-frontend=0406c74de33a2344082b59335e6690c59cc1a868f81b1df5401f63a3cadd735ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf-frontend=1f79e86d540aef331dc75e3cca92f49bb48c78cae60f3cba4d43a74e6e2fe716a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227GHkIBHcZ2pVzOiEtY9FylwZPLJ4i5Wj%22%3B%7D; advanced-backend=fvr96d4sko2cc5aim730lgv05c; _identity-backend=9070a2b4ea98b63ff44ce0fe118ae9c206fea8634a1a833caa2190027d3edd96a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tZOWO8CuhKrlf92p-akf4SMnwN9MzILx%22%2C2592000%5D%22%3B%7D; _csrf=fe32882a2d2058886b174ff3b990bf952ba87c31486bc0ef35c46bb36e01dd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ehGbpFvS_rETrgr1u-lzKuO3hLhai8DJ%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\OpenLogic\\jdk-21.0.4.7-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Python312\\Scripts\\;C:\\Python312\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Portugal Identity Card\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\wamp64\\bin\\php\\php8.1.26;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) PHP/8.1.26 mod_fcgid/2.3.10-dev'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REMOTE_PORT' => '63368'
+    'REDIRECT_URL' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete'
+    'REDIRECT_QUERY_STRING' => 'id=48'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=48'
+    'REQUEST_URI' => '/ProjetoSI_HenriqueNeves/backend/web/game/delete?id=48'
+    'SCRIPT_NAME' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'PHP_SELF' => '/ProjetoSI_HenriqueNeves/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1739198202.7249
+    'REQUEST_TIME' => 1739198202
+]

@@ -125,6 +125,12 @@ class GameController extends Controller
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
                 $uploadedFile = UploadedFile::getInstance($model, 'coverFile');
+
+                if (!$uploadedFile) {
+                    Yii::$app->session->setFlash('error', 'Upload an image first.');
+                    return $this->render('create', ['model' => $model]);
+                }
+
                 $uploadPath = Yii::getAlias('@webroot') . '/uploads/games/';
 
                 if (!file_exists($uploadPath)) {
@@ -173,23 +179,27 @@ class GameController extends Controller
         $model->genreIds = array_map(fn($genre) => $genre->id, $model->genres);
         $model->platformIds = array_map(fn($platform) => $platform->id, $model->platforms);
 
+        $existingCoverPath = $model->cover_path;
+
         if ($model->load(Yii::$app->request->post())) {
             $uploadedFile = UploadedFile::getInstance($model, 'coverFile');
-            $uploadPath = Yii::getAlias('@webroot') . '/uploads/games/';
-
-            if (!file_exists($uploadPath)) {
-                mkdir($uploadPath, 0777, true); // Create the directory if it doesn't exist
-            }
-
-            $fileName = uniqid() . '.' . $uploadedFile->extension;
-            $filePath = $uploadPath . $fileName;
             if ($uploadedFile) {
+                $uploadPath = Yii::getAlias('@webroot') . '/uploads/games/';
+                if (!file_exists($uploadPath)) {
+                    mkdir($uploadPath, 0777, true); // Create the directory if it doesn't exist
+                }
+
+                $fileName = uniqid() . '.' . $uploadedFile->extension;
+                $filePath = $uploadPath . $fileName;
+
                 if ($uploadedFile->saveAs($filePath)) {
                     $model->cover_path = Yii::$app->request->hostInfo . Yii::getAlias('@web') . '/uploads/games/' . $fileName;
                 } else {
                     Yii::$app->session->setFlash('error', 'File upload failed.');
-                    return $this->render('create', ['model' => $model]);
+                    return $this->render('update', ['model' => $model]);
                 }
+            } else {
+                $model->cover_path = $existingCoverPath;
             }
             if ($model->save()) {
                 $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
@@ -215,7 +225,40 @@ class GameController extends Controller
         if (!Yii::$app->user->can('deleteGame')) {
             throw new \yii\web\ForbiddenHttpException('You are not allowed to perform this action.');
         }
-        $this->findModel($id)->delete();
+
+        $model = $this->findModel($id);
+        $db = Yii::$app->db;
+
+        $tables = ['game_genre', 'game_platform', 'game_franchise', 'game_list'];
+        $teamlists = ['game_team_lists'];
+
+        foreach ($tables as $table) {
+            $exists = (new \yii\db\Query())
+                ->from($table)
+                ->where(['game_id' => $id])
+                ->exists();
+
+            if ($exists) {
+                $db->createCommand()
+                    ->delete($table, ['game_id' => $id])
+                    ->execute();
+            }
+        }
+
+        foreach ($teamlists as $teamlist) {
+            $exists = (new \yii\db\Query())
+                ->from($teamlist)
+                ->where(['games_id' => $id])
+                ->exists();
+
+            if ($exists) {
+                $db->createCommand()
+                    ->delete($teamlist, ['games_id' => $id])
+                    ->execute();
+            }
+        }
+
+        $model->delete();
 
         return $this->redirect(['index']);
     }

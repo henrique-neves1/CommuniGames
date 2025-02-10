@@ -143,50 +143,50 @@ class Games extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    /*public function getGameFranchises()
+    public function getGameFranchises()
     {
         return $this->hasMany(GameFranchise::class, ['game_id' => 'id']);
-    }*/
+    }
 
     /**
      * Gets query for [[GameGenres]].
      *
      * @return \yii\db\ActiveQuery
      */
-    /*public function getGameGenres()
+    public function getGameGenres()
     {
         return $this->hasMany(GameGenre::class, ['game_id' => 'id']);
-    }*/
+    }
 
     /**
      * Gets query for [[GameLists]].
      *
      * @return \yii\db\ActiveQuery
      */
-    /*public function getGameLists()
+    public function getGameLists()
     {
         return $this->hasMany(GameList::class, ['game_id' => 'id']);
-    }*/
+    }
 
     /**
      * Gets query for [[GamePlatforms]].
      *
      * @return \yii\db\ActiveQuery
      */
-    /*public function getGamePlatforms()
+    public function getGamePlatforms()
     {
         return $this->hasMany(GamePlatform::class, ['game_id' => 'id']);
-    }*/
+    }
 
     /**
      * Gets query for [[GameTeamLists]].
      *
      * @return \yii\db\ActiveQuery
      */
-    /*public function getGameTeamLists()
+    public function getGameTeamLists()
     {
         return $this->hasMany(GameTeamLists::class, ['games_id' => 'id']);
-    }*/
+    }
 
     /**
      * Gets query for [[Genres]].
