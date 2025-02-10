@@ -1,0 +1,49 @@
+From: CommuniGames robot <support@example.com>
+To: hneves.2005+1@gmail.com
+Subject: Account registration at CommuniGames
+MIME-Version: 1.0
+Date: Wed, 29 Jan 2025 22:23:30 +0000
+Message-ID: <f99b7c7120ff15208a250710f5f5bacb@example.com>
+Content-Type: multipart/alternative; boundary=TIy_gfG0
+
+--TIy_gfG0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello henriqueneves1,
+
+Follow the link below to verify your email:
+=
+
+http://localhost/ProjetoSI_HenriqueNeves/frontend/web/site/verify-email?token=KdVezb-6aNDgJexW3UPOBoE1A0efnRRg_1738189409
+--TIy_gfG0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"verify-email">
+    <p>Hello henriqueneves1,</p>
+
+  =
+  <p>Follow the link below to verify your email:</p>
+
+    <p><a href=3D=
+"http://localhost/ProjetoSI_HenriqueNeves/frontend/web/site/verify-email?to=
+ken=3DKdVezb-6aNDgJexW3UPOBoE1A0efnRRg_1738189409">http://localhost/Projeto=
+SI_HenriqueNeves/frontend/web/site/verify-email?token=3DKdVezb-6aNDgJexW3UP=
+OBoE1A0efnRRg_1738189409</a></p>
+</div>
+    </body>
+</html>
+
+--TIy_gfG0--
