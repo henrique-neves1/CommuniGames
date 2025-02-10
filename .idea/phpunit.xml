@@ -4,6 +4,8 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/tests" />
+        <option value="$PROJECT_DIR$/php-mqtt/client/tests/Unit" />
+        <option value="$PROJECT_DIR$/php-mqtt/client/tests/Feature" />
       </list>
     </option>
   </component>

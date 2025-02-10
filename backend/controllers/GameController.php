@@ -48,11 +48,11 @@ class GameController extends Controller
                         'allow' => true,
                         'roles' => ['@','*']
                     ],
-                    [
+                    /*[
                         'actions' => ['cover'],
                         'allow' => true,
                         'roles' => ['@','*']
-                    ],
+                    ],*/
                     [
                         'actions' => ['view'],
                         'allow' => true,
@@ -100,7 +100,7 @@ class GameController extends Controller
         ]);
     }
 
-    public function actionCover($id)
+    /*public function actionCover($id)
     {
         $model = $this->findModel($id);
 
@@ -108,7 +108,7 @@ class GameController extends Controller
         Yii::$app->response->headers->add('Content-Type', 'image/jpeg');
 
         return $model->cover_data;
-    }
+    }*/
 
     /**
      * Creates a new Games model.
@@ -124,8 +124,24 @@ class GameController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
-                $model->coverFile = UploadedFile::getInstance($model, 'coverFile');
-                if ($model->uploadCover() && $model->save()) {
+                $uploadedFile = UploadedFile::getInstance($model, 'coverFile');
+                $uploadPath = Yii::getAlias('@webroot') . '/uploads/games/';
+
+                if (!file_exists($uploadPath)) {
+                    mkdir($uploadPath, 0777, true); // Create the directory if it doesn't exist
+                }
+
+                $fileName = uniqid() . '.' . $uploadedFile->extension;
+                $filePath = $uploadPath . $fileName;
+                if ($uploadedFile) {
+                    if ($uploadedFile->saveAs($filePath)) {
+                        $model->cover_path = Yii::$app->request->hostInfo . Yii::getAlias('@web') . '/uploads/games/' . $fileName;
+                    } else {
+                        Yii::$app->session->setFlash('error', 'File upload failed.');
+                        return $this->render('create', ['model' => $model]);
+                    }
+                }
+                if ($model->save()) {
                     $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
                     $model->linkPlatforms(Yii::$app->request->post('Games')['platformIds']);
                     Yii::$app->session->setFlash('success', 'Game created successfully!');
@@ -157,21 +173,28 @@ class GameController extends Controller
         $model->genreIds = array_map(fn($genre) => $genre->id, $model->genres);
         $model->platformIds = array_map(fn($platform) => $platform->id, $model->platforms);
 
-        if ($this->request->isPost) {
-            if ($model->load($this->request->post())) {
-                $model->coverFile = UploadedFile::getInstance($model, 'coverFile');
-                if ($model->coverFile) {
-                    if ($model->uploadCover()) {
-                        Yii::$app->session->setFlash('success', 'Game updated successfully!');
-                    } else {
-                        Yii::$app->session->setFlash('error', 'Failed to upload the cover image.');
-                    }
+        if ($model->load(Yii::$app->request->post())) {
+            $uploadedFile = UploadedFile::getInstance($model, 'coverFile');
+            $uploadPath = Yii::getAlias('@webroot') . '/uploads/games/';
+
+            if (!file_exists($uploadPath)) {
+                mkdir($uploadPath, 0777, true); // Create the directory if it doesn't exist
+            }
+
+            $fileName = uniqid() . '.' . $uploadedFile->extension;
+            $filePath = $uploadPath . $fileName;
+            if ($uploadedFile) {
+                if ($uploadedFile->saveAs($filePath)) {
+                    $model->cover_path = Yii::$app->request->hostInfo . Yii::getAlias('@web') . '/uploads/games/' . $fileName;
+                } else {
+                    Yii::$app->session->setFlash('error', 'File upload failed.');
+                    return $this->render('create', ['model' => $model]);
                 }
-                if ($model->save()) {
-                    $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
-                    $model->linkPlatforms(Yii::$app->request->post('Games')['platformIds']);
-                    return $this->redirect(['view', 'id' => $model->id]);
-                }
+            }
+            if ($model->save()) {
+                $model->linkGenres(Yii::$app->request->post('Games')['genreIds']);
+                $model->linkPlatforms(Yii::$app->request->post('Games')['platformIds']);
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         }
 

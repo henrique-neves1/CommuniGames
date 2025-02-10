@@ -6,6 +6,7 @@ use common\models\Games;
 use app\models\GameSearch;
 use common\models\Genres;
 use common\models\HelpfulReviews;
+use common\models\Platforms;
 use common\models\Reviews;
 use common\models\UnhelpfulReviews;
 use Yii;
@@ -40,16 +41,6 @@ class GameController extends Controller
         }
 
         return $this->render('view', ['model' => $model]);
-    }
-
-    public function actionCover($id)
-    {
-        $model = $this->findModel($id);
-
-        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
-        Yii::$app->response->headers->add('Content-Type', 'image/jpeg');
-
-        return $model->cover_data;
     }
 
     public function actionAddToCart($id)
@@ -194,6 +185,36 @@ class GameController extends Controller
         return $this->render('search', [
             'dataProvider' => $dataProvider,
             'query' => $query,
+        ]);
+    }
+
+    public function actionByGenre($id)
+    {
+        $genre = Genres::findOne($id);
+        if (!$genre) {
+            throw new NotFoundHttpException('Genre not found.');
+        }
+
+        $games = $genre->games; // Retrieve games linked to this genre
+
+        return $this->render('by-genre', [
+            'genre' => $genre,
+            'games' => $games
+        ]);
+    }
+
+    public function actionByPlatform($id)
+    {
+        $platform = Platforms::findOne($id);
+        if (!$platform) {
+            throw new NotFoundHttpException('Platform not found.');
+        }
+
+        $games = $platform->games; // Retrieve games linked to this platform
+
+        return $this->render('by-platform', [
+            'platform' => $platform,
+            'games' => $games
         ]);
     }
 

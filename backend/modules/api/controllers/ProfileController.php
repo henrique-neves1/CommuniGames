@@ -30,4 +30,10 @@ class ProfileController extends ActiveController
     {
         return ['status' => 'working'];
     }
+
+    public function actionNames() {
+        $profilemodel = new $this->modelClass;
+        $recs = $profilemodel::find()->select(['name'])->all();
+        return $recs;
+    }
 }

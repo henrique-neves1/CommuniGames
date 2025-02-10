@@ -30,4 +30,16 @@ class UserController extends ActiveController
     {
         return ['status' => 'working'];
     }
+
+    public function actionUsernames() {
+        $usermodel = new $this->modelClass;
+        $recs = $usermodel::find()->select(['username'])->all();
+        return $recs;
+    }
+
+    public function actionCount() {
+        $usermodel = new $this->modelClass;
+        $recs = $usermodel::find()->all();
+        return ['User count' => count($recs)];
+    }
 }

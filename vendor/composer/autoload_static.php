@@ -113,6 +113,10 @@ class ComposerStaticInit2158b2fbf2c2f964ea5d76c3986297c9
             'Codeception\\Extension\\' => 22,
             'Codeception\\' => 12,
         ),
+        'B' => 
+        array (
+            'Bluerhinos\\' => 11,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -317,6 +321,10 @@ class ComposerStaticInit2158b2fbf2c2f964ea5d76c3986297c9
             0 => __DIR__ . '/..' . '/codeception/codeception/src/Codeception',
             1 => __DIR__ . '/..' . '/codeception/stub/src',
             2 => __DIR__ . '/..' . '/codeception/verify/src/Codeception',
+        ),
+        'Bluerhinos\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bluerhinos/phpmqtt',
         ),
     );
 

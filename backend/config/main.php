@@ -57,13 +57,53 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule','controller' => 'api/game',
+                    'extraPatterns' => [
+                        'GET names' => 'names',
+                        'GET prices' => 'prices',
+                        'GET count' => 'count',
+                        'GET {id}/name' => 'namebyid',
+                        'GET {id}/price' => 'pricebyid',
+                    ],
                 ],
                 [
-                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/user','pluralize' => false,
+                    'extraPatterns' => [
+                        'GET usernames' => 'usernames',
+                        'GET {id}/username' => 'usernamebyid',
+                        'GET count' => 'count',
+                    ]
                 ],
                 [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/profile',
+                    'extraPatterns' => [
+                        'GET names' => 'names',
+                    ]
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/cart','pluralize' => false,
+                    'extraPatterns' => [
+                        'GET {id}' => 'databyid',
+                        'GET profile/{profile_id}' => 'databyprofile',
+                        'POST profile/{profile_id}/game/{game_id}' => 'add',
+                        'PUT {id}/quantity/{quantity}' => 'updatequantity',
+                        'DELETE {id}' => 'removeitem'
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                        '{profile_id}' => '<profile_id:\\d+>',
+                        '{game_id}' => '<game_id:\\d+>',
+                        '{quantity}' => '<quantity:\\d+>'
+                    ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/chatbot','pluralize' => false,
+                    'extraPatterns' => [
+                        'GET eco/{param}' => 'eco',
+                    ],
+                    'tokens' => [
+                        '{param}' => '<param:>',
+                    ]
+                ]
             ],
         ],
     ],

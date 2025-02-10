@@ -19,9 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name') ?>
 
-    <?= $form->field($model, 'cover_name') ?>
-
-    <?= $form->field($model, 'cover_data') ?>
+    <?= $form->field($model, 'cover_path') ?>
 
     <?= $form->field($model, 'description') ?>
 

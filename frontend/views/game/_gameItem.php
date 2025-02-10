@@ -9,15 +9,12 @@ use yii\helpers\Url;
     <div class="game-item" style="text-align: center; min-width: 150px;">
         <div class="game-cover">
             <?= Html::a(
-                Html::img(
-                    Url::to(['game/cover', 'id' => $model->id]),
-                    ['alt' => $model->name, 'style' => 'width: 100px; height: auto;']
-                ),
+                Html::img($model->cover_path, ['alt' => $model->name, 'style' => 'width: 100px; height: auto; border-radius: 7px']),
                 ['game/view', 'id' => $model->id]
             ) ?>
         </div>
         <div class="game-title" style="margin-top: 5px; font-weight: bold;">
-            <?= Html::encode($model->name) ?>
+            <?= Html::a(Html::encode($model->name),['game/view', 'id' => $model->id]) ?>
         </div>
         <div class="game-price" style="font-size: 0.9em; color: #555;">
             €<?= Html::encode($model->price) ?>

@@ -6,11 +6,16 @@ use yii\helpers\Url;
 /** @var yii\web\View $this */
 /** @var common\models\Games[] $games */
 
-$this->title = 'Your Cart';
+$this->title = 'Cart';
 ?>
 <div class="cart-index">
 
-    <h1>Your Cart</h1>
+    <h1>Cart</h1>
+
+    <?= Html::a('Checkout', ['cart/checkout'], [
+            'class' => 'btn btn-success' . ($isCartEmpty ? ' disabled' : ''),
+            'style' => 'pointer-events: ' . ($isCartEmpty ? 'none' : 'auto') . ';',
+    ]) ?>
 
     <table class="table">
         <thead>
@@ -27,12 +32,19 @@ $this->title = 'Your Cart';
         <?php foreach ($games as $game): ?>
             <tr>
                 <td>
-                    <?= Html::img(
-                        Url::to(['game/cover', 'id' => $game['id']]),
-                        ['alt' => $game['name'], 'style' => 'width: 100px; height: auto;']
-                    ) ?>
+
+                    <?=
+                    Html::a(
+                    Html::img(
+                        $game['cover_path'],
+                        ['alt' => $game['name'], 'style' => 'width: 100px; height: auto; border-radius: 7px']
+                    ),
+                    ['game/view', 'id' => $game['id']]
+                    )
+                    ?>
                 </td>
-                <td><?= Html::encode($game['name']) ?></td>
+                <td><?=
+                    Html::a(Html::encode($game['name']),['game/view', 'id' => $game['id']]) ?></td>
                 <td>€<?= Html::encode($game['price']) ?></td>
                 <td>
                     <?= Html::beginForm(['cart/update-quantity'], 'post') ?>

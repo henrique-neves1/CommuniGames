@@ -9,31 +9,32 @@ use Yii;
  *
  * @property int $id
  * @property string|null $name
- * @property string|null $cover_name
- * @property resource|null $cover_data
+ //* @property string|null $cover_name
+ //* @property resource|null $cover_data
+ * @property string|null $cover_path
  * @property string|null $description
  * @property string|null $developer_name
  * @property string|null $publisher_name
  * @property string|null $releasedate
  * @property float|null $price
  *
- //* @property Acquisitions[] $acquisitions
+ * //* @property Acquisitions[] $acquisitions
  * @property Cart[] $carts
- //* @property Favorites[] $favorites
- //* @property Franchises[] $franchises
- //* @property GameFranchise[] $gameFranchises
- //* @property GameGenre[] $gameGenres
- //* @property GameList[] $gameLists
- //* @property GamePlatform[] $gamePlatforms
- //* @property GameTeamLists[] $gameTeamLists
+ * //* @property Favorites[] $favorites
+ * //* @property Franchises[] $franchises
+ * //* @property GameFranchise[] $gameFranchises
+ * //* @property GameGenre[] $gameGenres
+ * //* @property GameList[] $gameLists
+ * //* @property GamePlatform[] $gamePlatforms
+ * //* @property GameTeamLists[] $gameTeamLists
  * @property Genres[] $genres
- //* @property Lists[] $lists
- //* @property MediaAlbum[] $mediaAlbums
+ * //* @property Lists[] $lists
+ * //* @property MediaAlbum[] $mediaAlbums
  * @property Platforms[] $platforms
- //* @property Posts[] $posts
+ * //* @property Posts[] $posts
  * @property Reviews[] $reviews
  * @property TeamLists[] $teamLists
- //* @property Wishlist[] $wishlists
+ * //* @property Wishlist[] $wishlists
  */
 class Games extends \yii\db\ActiveRecord
 {
@@ -54,8 +55,8 @@ class Games extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'cover_name', 'cover_data', 'description', 'developer_name', 'publisher_name', 'releasedate', 'price'], 'safe'],
-            [['coverFile'], 'file', 'extensions' => 'png, jpg, jpeg, gif', 'maxSize' => 1024 * 1024 * 5],
+            [['name', 'description', 'developer_name', 'publisher_name', 'releasedate', 'price'], 'safe'],
+            [['coverFile'], 'file', 'extensions' => 'png, jpg, jpeg, gif', 'skipOnEmpty' => true],
             [['genreIds'], 'safe'],
             [['platformIds'],'safe']
         ];
@@ -63,10 +64,19 @@ class Games extends \yii\db\ActiveRecord
 
     public function uploadCover()
     {
-        if ($this->validate() && $this->coverFile !== null) {
-            $this->cover_name = $this->coverFile->name;
-            $this->cover_data = file_get_contents($this->coverFile->tempName);
-            return true;
+        if ($this->validate() && $this->coverFile && file_exists($this->coverFile->tempName)) {
+            $directory = Yii::getAlias('@backend/web/uploads/games/');
+            if (!is_dir($directory)) {
+                mkdir($directory, 0775, true); // Create the directory if it doesn't exist
+            }
+
+            // Define the file path relative to the backend/web/uploads/games/ folder
+            $filePath = 'uploads/games/' . uniqid() . '.' . $this->coverFile->extension;
+
+            // Save the file to backend/web/uploads
+            if ($this->coverFile->saveAs(Yii::getAlias('@backend/web') . '/' . $filePath)) {
+                return $filePath; // Return the relative file path
+            }
         }
         return false;
     }
@@ -79,8 +89,7 @@ class Games extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'cover_name' => 'Cover Name',
-            'cover_data' => 'Cover Data',
+            'cover_path' => 'Cover Path',
             'description' => 'Description',
             'developer_name' => 'Developer Name',
             'publisher_name' => 'Publisher Name',
@@ -295,12 +304,12 @@ class Games extends \yii\db\ActiveRecord
         }
     }
 
-    public function getCoverBase64()
+    /*public function getCoverBase64()
     {
         return $this->cover_data ? base64_encode($this->cover_data) : null;
-    }
+    }*/
 
-    public function fields()
+    /*public function fields()
     {
         $fields = parent::fields();
 
@@ -311,5 +320,5 @@ class Games extends \yii\db\ActiveRecord
         $fields['cover_base64'] = 'coverBase64';
 
         return $fields;
-    }
+    }*/
 }

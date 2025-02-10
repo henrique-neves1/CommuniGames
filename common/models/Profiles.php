@@ -39,6 +39,9 @@ use Yii;
  */
 class Profiles extends \yii\db\ActiveRecord
 {
+
+    public $picture_file;
+
     /**
      * {@inheritdoc}
      */
@@ -60,6 +63,7 @@ class Profiles extends \yii\db\ActiveRecord
             [['name'], 'string', 'max' => 50],
             [['picture_name'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
+            [['picture_file'], 'file', 'extensions' => 'png, jpg, jpeg', 'maxSize' => 1024 * 1024],
         ];
     }
 
@@ -77,6 +81,14 @@ class Profiles extends \yii\db\ActiveRecord
             'balance' => 'Balance',
             'user_id' => 'User ID',
         ];
+    }
+
+    public function savePicture()
+    {
+        if ($this->picture_file) {
+            $this->picture_name = $this->picture_file->name;
+            $this->picture_data = file_get_contents($this->picture_file->tempName);
+        }
     }
 
     /**
@@ -287,6 +299,18 @@ class Profiles extends \yii\db\ActiveRecord
     public function getWishlists()
     {
         return $this->hasMany(Wishlist::class, ['profile_id' => 'id']);
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($this->picture_file) {
+                $this->picture_name = $this->picture_file->baseName . '.' . $this->picture_file->extension;
+                $this->picture_data = file_get_contents($this->picture_file->tempName);
+            }
+            return true;
+        }
+        return false;
     }
 
     public function getPictureBase64()

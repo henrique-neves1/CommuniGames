@@ -31,7 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="games-view">
 
     <div class="container">
-        <img src="<?= Yii::$app->urlManager->createUrl(['game/cover', 'id' => $model->id]) ?>" alt="Cover Image" class="image">
+        <?php
+            if ($model->cover_path) {
+                echo Html::img($model->cover_path, ['width' => '300']);
+            }
+        ?>
         <div class="text-container">
         <h3>Description:</h3> <?= Html::encode($model->description) ?>
         </div>
@@ -63,4 +67,5 @@ $this->params['breadcrumbs'][] = $this->title;
             'method' => 'post',
         ],
     ]) ?>
+
 </div>

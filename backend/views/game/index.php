@@ -31,13 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'id',
             [
-                'attribute' => 'cover',
-                'format' => 'raw',
+                'attribute' => 'cover_path',
+                'format' => 'html',
                 'value' => function ($model) {
-                    return Html::img(
-                        Url::to(['game/cover', 'id' => $model->id]),
-                        ['alt' => 'Cover Image', 'style' => 'width:100px; height:auto;']
-                    );
+                    return $model->cover_path
+                        ? Html::img($model->cover_path, ['width' => '100'])
+                        : null;
                 },
             ],
             'name',
